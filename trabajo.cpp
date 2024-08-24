@@ -6,7 +6,6 @@
 #include <sstream>
 
 using namespace std; 
-// Estructura para almacenar los argumentos de línea de comandos
 
 struct Args {
     string usuario;
@@ -23,7 +22,6 @@ int main(int argc, char *argv[]) {
     int c; 
     Args args;
     
-    // Procesar argumentos de línea de comandos
     while ((c = getopt(argc, argv, "u:p:t:v:n:")) != -1) {
         switch (c) {
             case 'u':
@@ -52,7 +50,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Verificar que todos los argumentos necesarios fueron proporcionados
     if (args.usuario.empty() || args.contrasena.empty() || args.frase.empty() || args.vectorStr.empty() || args.numero == 0) {
         cout << "Todos los argumentos (-u, -p, -t, -v, -n) son requeridos.\n";
         return 1;

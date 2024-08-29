@@ -4,8 +4,10 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include "funciones_frase.h"
 
 using namespace std; 
+// Estructura para almacenar los argumentos de línea de comandos
 
 struct Args {
     string usuario;
@@ -22,6 +24,7 @@ int main(int argc, char *argv[]) {
     int c; 
     Args args;
     
+    // Procesar argumentos de línea de comandos
     while ((c = getopt(argc, argv, "u:p:t:v:n:")) != -1) {
         switch (c) {
             case 'u':
@@ -50,6 +53,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // Verificar que todos los argumentos necesarios fueron proporcionados
     if (args.usuario.empty() || args.contrasena.empty() || args.frase.empty() || args.vectorStr.empty() || args.numero == 0) {
         cout << "Todos los argumentos (-u, -p, -t, -v, -n) son requeridos.\n";
         return 1;
@@ -69,7 +73,7 @@ void mostrarMenu(const Args& args) {
         cout << "\nSeleccione una opción de menú:\n";
         cout << "1) Detección de palíndromos\n";
         cout << "2) Contar vocales\n";
-        cout << "3) Contar letras en un texto\n";
+        cout << "3) Contar letras\n";
         cout << "4) Promedio y sumatoria de un vector\n";
         cout << "5) Calcular f(x) = 5x^2 + 1/x\n";
         cout << "6) Salir\n";
@@ -78,15 +82,15 @@ void mostrarMenu(const Args& args) {
 
         switch (opcion) {
             case 1:{
-                cout<<5<<endl;
+                palindromo(args.frase);
                 break;
             }
             case 2:{
-                cout << 4<<endl;
+                cout<<"El N° de Vocales es: "<<ContarVocales(args.frase)<<endl;
                 break;
             }
             case 3:{
-                cout << 3<<endl;
+                cout<<"EL N° de Letras es: "<<ContarLetras(args.frase)<<endl;  
                 break;
             }
             case 4: {

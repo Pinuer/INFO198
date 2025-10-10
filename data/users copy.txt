@@ -1,0 +1,4 @@
+UsuarioA,contraseña,admin
+UsuarioB,password,genuser
+UsuarioC,1234678,genuser
+UsuarioD,87654321,admin

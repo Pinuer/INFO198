@@ -18,7 +18,7 @@ Este programa fue creado usando C++.
 En la carpeta donde se desea guarda el programa, abrir la terminal y ejecutar el siguiente comando git:
 
 ```cmd 
-  git clone https://github.com/Pinuer/INFO198
+  git clone https://github.com/Pinuer/INFO198.git
 ```
 
 Luego de clonar el repositorio, mover la terminal a la carpeta usando el siguiente comando:

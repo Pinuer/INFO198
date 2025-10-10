@@ -1,4 +1,4 @@
-# INFO198_SO.cpp
+# INFO198.cpp
 
 ## Descripcion
 Programa propuesto en el curso INFO198 Sistemas Operativos donde se creara un sistema operativo a lo largo del semestre, donde se podra ejecutar ingresando varaiables descritas mas abajo.
@@ -18,7 +18,7 @@ Este programa fue creado usando C++.
 En la carpeta donde se desea guarda el programa, abrir la terminal y ejecutar el siguiente comando git:
 
 ```cmd 
-  git clone https://github.com/Acement/INFO198.git
+  git clone https://github.com/Pinuer/INFO198
 ```
 
 Luego de clonar el repositorio, mover la terminal a la carpeta usando el siguiente comando:
